@@ -1,0 +1,9 @@
+2,Nedelcu Adrian Cosmin,Customer,cosmin_ndlc@yahoo.com,1234dec,Callatis 12,Timisul de sus 3,0773941106
+700,Marius Mihai,Staff member,marius@yahoo.com,Human Resources,2050,0849492323
+210,Laur Stan,Staff member,laur@gmail.com,Credit and Collections,2700,0734665521
+43,Draghici Mihaela,Customer,mih@yahoo.com,mihaelapass,Strada Capsuna 3,Strada Capsuna 3,0773654654
+34,Leustean Mihai,Customer,mihai432@yahoo.com,mihaiglovo,Strada Stefan cel Mare 58,Strada Stefan cel Mare 58,0746987654
+54,Nedelcu Andrei,Customer,andreinedelcu654@gmail.com,aprilie2004,Callats 12,Callatis 12,0773941080
+32,Mihaila Valentin,Customer,mihaivali@yahoo.com,mihai324,Str Castana 3,Str Aviatorilor 1,0734562312
+234,Nedelcu Ioan,Staff member,ioan784@yahoo.com,Automation Developer,3200,0773941108
+900,Marcel Puscas,Staff member,pusca3@yahoo.com,Managerial,5000,0723456789

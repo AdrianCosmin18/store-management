@@ -1,0 +1,9 @@
+1000,Volkswagen,26500.000000,1500.000000,year 2021 ; full option,Car,Passat,2021,grey
+1001,Skoda,14900.000000,1350.000000,includes AC ; last of this stock,Car,Kamiq,2019,red
+1002,Mercedes,39450.000000,1800.000000,last piece of Mercedes ; most seales,Car,C-Class,2020,silver
+2000,Lenovo,1000.000000,3.500000,quality quantity price excelent,PC,AMD Ryzen 7,Windows 10 Pro,512
+2001,Asus,950.000000,3.200000,immpresive from the point of view of video quality => up to 4k,PC,IntelCore i5,Linux,256
+2002,HP,1250.000000,1.900000,32 GB RAM - new memory,PC,IntelCore i7,Windows 10,512
+3000,Apple pie,5.500000,1.000000,~ 1200 kcal,Bakery
+3001,Chocolate snail,1.000000,0.300000,~350 kcal,Bakery
+3002,Big pumpkin snail,6.500000,1.000000,round pie ; ~1350 kcal,Bakery

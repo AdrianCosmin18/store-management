@@ -1,0 +1,204 @@
+#include"ControlOrder_Details.h"
+
+class ViewUser
+{
+private:
+	ControlProduct* controlproduct;
+	ControlOrder* controlorder;
+	ControlOrder_Details* controlorderdetails;
+	Customer* customer;
+
+	Order* order;
+
+
+
+public:
+
+
+	ViewUser(Customer* c) {
+
+
+		controlproduct = new ControlProduct();
+		controlorder = new ControlOrder();
+		controlorderdetails = new ControlOrder_Details();
+		this->customer = c;
+
+
+		this->order = new Order(controlorder->NextAvailableID(),
+							0,
+							this->customer->get_ID(),
+							"Shipping Address");
+		
+
+	}
+
+	void meniu() {
+
+		cout << "\n\n\nContul Meu ";
+		cout << "\nNume : " << customer->get_name();
+		cout << "\nEmail :" << customer->get_mail();
+		cout << "\nShipping Address : " << customer->get_shipping_address();
+
+		cout << endl;
+
+		cout << "\nPentru a afisa lista de produse disponibile, apasati 1 ";
+		cout << "\nPentru a adauga un produs in cos, apasati 2";
+		cout << "\nPentru a vedea produsele din cos apasati 3";
+		cout << "\nPentru a sterge un produs din cos apasati 4";
+		cout << "\nPentru a plasa comanda apasati 5";
+
+		//istoric comenzile mele
+	}
+
+	void play() {
+
+		bool oprire;
+		oprire = false;
+
+		while (oprire == false) {
+
+			meniu();
+			int choice;
+			string c;
+			cout << "\nChoice : ";
+			getline(cin, c);
+			choice = stoi(c);
+
+			switch (choice) {
+
+			case 1: controlproduct->traverse();
+				break;
+
+			case 2: add_product_to_cart();
+				break;
+
+			case 3: view_cart();
+				break;
+			case 4: delete_from_cart();
+				break;
+
+			case 5: place_order();
+				break;
+
+			}
+
+		}
+	}
+
+
+
+	void add_product_to_cart() {
+
+		cout << "\nIntroduceti numele produsului pe care doriti sa-l adaugati in cos : ";
+		string name;
+		getline(cin, name);
+
+		int id = controlproduct->GetIDbyName(name);
+
+		if (id != -1) {
+			Product* p = controlproduct->GetProductbyID(id);
+
+			cout << "\nCantitatea : ";
+			int quantity;
+			string q;
+			getline(cin, q);
+			quantity = stoi(q);
+
+
+			Order_Details* d1 = new Order_Details(controlorderdetails->NextAvailableID(),
+				this->order->get_ID(),
+				p->get_ID(),
+				quantity,
+				quantity * p->get_price());
+
+			int sum = this->order->get_price();
+			this->order->set_price(sum + d1->get_price());
+
+
+			controlorderdetails->add_detail(d1);
+
+			cout << "\nProdus adaugat cu succes"<<endl;
+
+		}
+		else {
+			cout << "\nNumele produsului introdus nu exista, incercati din nou ";
+		}
+	}
+
+	void view_cart() {
+
+		list<Order_Details*> lista;
+		lista = controlorderdetails->GetListByOrderID(this->order->get_ID());
+
+		cout << "\nCos : " << endl;
+
+		if (lista.begin() == lista.end()) { cout << "Nu aveti produse in cos\n"; }
+
+
+		for (auto x : lista) {
+
+			cout << "Produsul: " << controlproduct->GetProductbyID(x->get_product_ID())->get_name() << ", ";
+			cout << x->get_quantity() << " buc. " << "; " << x->get_quantity() << " x " << controlproduct->GetProductbyID(x->get_product_ID())->get_price() << " euro" <<endl;
+
+		 }
+
+		cout << "\n Cost Total : " << this->order->get_price();
+	}
+
+	void delete_from_cart() {
+
+		//check if the cart is empty
+		list<Order_Details*> lista;
+		lista = controlorderdetails->GetListByOrderID(this->order->get_ID());
+
+		if (lista.begin() == lista.end()) { cout << "Nu poti sterge produse din cos, cosul este gol\n"; }
+		else {
+
+			string nume;
+			cout << "\nNumele produsului pe care doriti sa-l stergeti : ";
+			getline(cin, nume);
+
+
+			int product_id = controlproduct->GetIDbyName(nume);
+			Order_Details* od = controlorderdetails->GetOrderDetailsByProductIDAndOrderID(this->order->get_ID(), product_id);
+
+
+
+			controlorder->modify_order(
+				this->order->get_ID(),
+				controlorderdetails->GetTotalPriceByOrderID(this->order->get_ID()) - od->get_price());
+
+			cout << "\nProdusul a fost sters din cos";
+
+			controlorderdetails->erase(od->get_ID());
+			
+		}
+
+	}
+
+	void place_order() {
+
+
+		//check if the cart is empty
+		list<Order_Details*> lista;
+		lista = controlorderdetails->GetListByOrderID(this->order->get_ID());
+
+		
+		cout << "Pentru a plasa comanda, introduceti cuvantul 'da' ";
+		string ch;
+		getline(cin, ch);
+
+		if (ch == "da") {
+
+			if (lista.begin() == lista.end()) { cout << "\nCosul este gol !!!"; }
+			else {
+
+				controlorderdetails->save_to_file();
+				controlorder->save_to_file();
+				cout << "\nComanda plasata cu succes";
+			}
+		}
+	}
+
+};
+
