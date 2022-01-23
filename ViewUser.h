@@ -29,7 +29,6 @@ public:
 							this->customer->get_ID(),
 							"Shipping Address");
 		
-
 	}
 
 	void meniu() {
