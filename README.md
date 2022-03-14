@@ -1,4 +1,4 @@
-# store-management
+# store-management (this project is ongoing)
 I created an app that presents concepts specific to OOP in C++ which includes : Encapsulation, 
 Inheritance , Polymorphism, Overriding, Abstraction. The project is a vehicle rental application and 
 in his final stage should have a choise, you can log in as a staff member (administrator) or existing
