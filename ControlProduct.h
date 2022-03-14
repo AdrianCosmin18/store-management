@@ -148,7 +148,6 @@ public:
 		b->set_description(descript);
 	}
 
-
 	int GetIDbyName(string n) {
 
 		list<Product*>::iterator itr;
@@ -159,7 +158,6 @@ public:
 
 		return -1;
 	}
-
 
 	Product* GetProductbyID(int id) {
 

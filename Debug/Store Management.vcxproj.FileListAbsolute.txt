@@ -1,1 +1,2 @@
 C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\Debug\Store Management.exe
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\Debug\Store Management.exe

@@ -54,15 +54,11 @@ public:
 		}
 	}
 
-
-
-
 	string describe_to_file() {
 
 		string text = to_string(ID) + "," + to_string(order_ID) + "," + to_string(product_ID) + "," + to_string(quantity) + "," + to_string(price);
 		return text;
 	}
-
 
 	string describe() {
 

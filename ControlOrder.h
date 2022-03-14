@@ -100,8 +100,6 @@ public:
 		}
 	}
 
-
-
 	int GetLastOrderID() {
 
 		if (orders.begin() != orders.end()) {

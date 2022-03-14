@@ -1,11 +1,13 @@
-﻿  Store Management.cpp
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ControlOrder_Details.h(170,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ViewUser.h(114,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+﻿  ControlOrder.cpp
+  ControlOrder_Details.cpp
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlOrder_Details.h(170,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Order_Details.cpp
+  Store Management.cpp
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlOrder_Details.h(170,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   ViewUser.cpp
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ControlOrder_Details.h(170,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ViewUser.h(114,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlOrder_Details.h(170,1): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   Generating Code...
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ControlProduct.h(171): warning C4715: 'ControlProduct::GetProductbyID': not all control paths return a value
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ControlOrder.h(101): warning C4715: 'ControlOrder::GetOrderbyID': not all control paths return a value
-C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\ControlOrder_Details.h(77): warning C4715: 'ControlOrder_Details::poz_itr': not all control paths return a value
-  Store Management.vcxproj -> C:\Users\Cosmin\C++Meditatii\OOP\Polimorfism\ProiectProducts\Store Management\Debug\Store Management.exe
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlProduct.h(169): warning C4715: 'ControlProduct::GetProductbyID': not all control paths return a value
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlOrder.h(101): warning C4715: 'ControlOrder::GetOrderbyID': not all control paths return a value
+C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\ControlOrder_Details.h(77): warning C4715: 'ControlOrder_Details::poz_itr': not all control paths return a value
+  Store Management.vcxproj -> C:\Users\Cosmin\MeditatiiInformatica\C++Meditatii\OOP\Polimorfism\ProiectProducts\StoreManagement\Debug\Store Management.exe

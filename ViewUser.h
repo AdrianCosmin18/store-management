@@ -6,10 +6,9 @@ private:
 	ControlProduct* controlproduct;
 	ControlOrder* controlorder;
 	ControlOrder_Details* controlorderdetails;
+
 	Customer* customer;
-
 	Order* order;
-
 
 
 public:
@@ -102,13 +101,21 @@ public:
 			string q;
 			getline(cin, q);
 			quantity = stoi(q);
-		}
 
+			controlorderdetails->add_detail(new Order_Details(controlorderdetails->NextAvailableID(), this->order->get_ID(), p->get_ID(), quantity, quantity * p->get_price()));
+			controlorderdetails->save_to_file();
+		}
 	}
 
 	//merge ok
 	void view_cart() {
 
+		list<Order_Details*> list = controlorderdetails->GetListByOrderID(this->order->get_ID());
+		cout << "\nCos : " << endl;
+		for (auto itr : list) {
+
+			
+		}
 
 	}
 
@@ -147,7 +154,7 @@ public:
 	void place_order() {
 
 
-
+		
 	}
 
 };
